@@ -21,7 +21,7 @@ $input_balance=(array_key_exists('balance',$_POST)) ? $_POST['balance'] : "";
 $html_output= str_replace("{VALUE_BALANCE}", $input_balance, $html_consulta2);
 echo $html_output;
 
-$link_consulta2="http://localhost/api/consulta2/".$input_balance;
+$link_consulta2="http://localhost:6969/api/consulta2/".$input_balance;
 $data_consulta2=file_get_contents($link_consulta2);
 $api_output = json_decode($data_consulta2, TRUE);
 
