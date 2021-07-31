@@ -20,7 +20,7 @@ $input_pais=(array_key_exists('pais',$_POST)) ? $_POST['pais'] : "";
 $html_output= str_replace("{VALUE_PAIS}", $input_pais,$html_consulta3);
 echo $html_output;
 
-$link_consulta3="http://localhost/api/consulta3/".$input_pais;
+$link_consulta3="http://localhost:6969/api/consulta3/".$input_pais;
 $data_consulta3=file_get_contents($link_consulta3);
 $api_output = json_decode($data_consulta3, TRUE);
 
